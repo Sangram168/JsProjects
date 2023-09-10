@@ -8,7 +8,7 @@ const openModal = () => {
   overlay.classList.add("overlayactive");
 };
 
-// Modal close function
+//  Modal close function
 const closeModal = () => {
   modal.classList.remove("active");
   overlay.classList.remove("overlayactive");
