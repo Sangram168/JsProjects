@@ -73,3 +73,19 @@ function calcStrength() {
     }
 }
 
+async function copyContent() {
+    try {
+        await navigator.clipboard.writeText(passwordDisplay.value);
+        copyMsg.innerText = "copied";
+    }
+    catch(e) {
+        copyMsg.innerText = "failed"
+    }
+
+    // to set copy span visible
+    copyMsg.classList.add("active");
+
+    setTimeout(() => {
+        copyMsg.classList.remove("active");
+    },2000);
+}
